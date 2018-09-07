@@ -1,0 +1,811 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
+* {
+	margin:0;
+	padding:0;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+html, body {
+	height:100%;
+}
+
+input:focus {
+	outline: none;
+    outline-width: 0;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+#user_data {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	display: none;
+	background-color: wheat;
+    z-index: 400;
+}
+
+#user_data p {
+	margin-top: 14px;
+}
+#image_load {
+	display: none;
+}
+.user_data_close {
+	width: 50px;
+    /* height: 50px; */
+    margin: 0 auto;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+}
+#home_box {
+	width:100%;
+	height:100%;
+}
+
+#top_box {
+	background-image: url(./imgs/index_background.jpg);
+	background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    height:86%;
+}
+
+.hobylogo {
+	padding-top:15px;
+	text-align: center;
+	height:70px;
+	
+}
+
+#pre_info .hobylogo, #quiz_box .hobylogo, #result_kyobo .hobylogo {
+	background-image: url(./imgs/index_background.jpg);
+	background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: top center;
+    height:90px;
+}
+
+.hobylogo img {
+	height:70px;
+}
+
+#text_findyourhobby {
+	width:100%;
+	text-align: center;
+}
+#text_findyourhobby.spacer {
+	
+}
+#text_findyourhobby img {
+	width:61%;
+	max-width: 468px;
+}
+
+#btn_start {
+	width:100%;
+	text-align: center;
+}
+
+#btn_start img {
+	width:44%;
+	max-width: 337px;
+	cursor: pointer; 
+}
+
+img.center_layout {
+
+}
+
+
+#bottom_box {
+	height:14%;
+    text-align: center;
+}
+
+.infobox {
+    width: 28%;
+    display: inline-block;
+    vertical-align:top;
+    margin: 35px 5px 0;
+}
+
+.infobox .left {
+	position: absolute;
+	width:50px;
+}
+.infobox .right {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	display: table-cell;
+	vertical-align: middle;
+    font-size: 0.8em;
+    text-align: left;
+    width:100%;
+    padding-left: 60px;
+    height:50px;
+}
+
+.infobox .left img {
+	width:100%;
+}
+
+
+#pre_info {
+	display: none;
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 89%;
+}
+
+.contents {
+	margin:0 auto;
+	max-width:500px;
+}
+
+#pre_info .event_title {
+	font-size: 1.4em;
+	font-weight: 800;
+	text-align: center;
+	color: red;
+	margin-top: 60px;
+}
+
+#pre_info .line_red {
+	width: 45px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#pre_info .info1 {
+	font-size: 0.9em;
+    text-align: center;
+    max-width: 350px;
+    margin: 30px auto 0;
+    font-weight: 600;
+}
+
+#pre_info .info2 {
+	font-size: 0.7em;
+	text-align: center;
+	color: #777;
+	max-width: 250px;
+    margin: 30px auto 40px;
+}
+
+
+#pre_info .input_wrap {
+	margin:20px auto;
+	max-width:350px;
+	height:50px;
+    border: 1px solid #999;
+    border-radius: 25px;
+}
+
+#pre_info .input_title {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    background-color: #999;
+    border-radius: 24px 0 0 24px;
+    color: white;
+    position: absolute;
+    width: 100px;
+    height: inherit;
+    padding-top: 15px;
+    font-size: 0.8em;
+    text-align: center;
+    /*font-weight: 100;*/
+}
+#pre_info .input_txt {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	position: relative;
+	width:100%;
+	height:inherit;
+	padding-left: 110px;
+	padding-right:20px;
+}
+
+#pre_info .input_txt input {
+	width:100%;
+	height:inherit;
+	border: none;
+	font-size:1.4em;
+	background-color: transparent;
+}
+
+#pre_info .btn_wrap {
+	margin: 45px auto 0;
+	max-width: 400px;
+    overflow: hidden;
+    padding-left: 12px;
+}
+
+#pre_info .btn_box {
+	display: table-cell;
+	vertical-align: middle;
+	color:white;
+	padding: 10px;
+	text-align: center;
+    height: 60px;
+    font-weight: 600;
+}
+
+.btn_box.red {
+	background-color: #d00;
+}
+
+#pre_info .btn_box.gray {
+	background-color: #777;
+	padding:10px 20px;
+}
+#pre_info .btn_box p.btn_title {
+	font-size:0.9em;
+}
+.btn_box p.btn_info {
+	font-size: 0.6em;
+    /*font-weight: 100;*/
+}
+
+
+#quiz_box {
+	display: none;
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 89%;
+}
+
+#quiz_whiteback {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width:100%;
+	height: 92%;
+	background-color: white;
+}
+
+#progress {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	text-align: center;
+	width:100%;
+	font-weight: 500;
+	font-size: 1.7em;
+	padding:10px;
+	padding-top: 73px;
+}
+
+#progress span {
+	color: red;
+}
+
+#quiz_title {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	text-align: center;
+	width:100%;
+	font-weight: 500;
+	max-width: 700px;
+	font-size: 1.5em;
+	padding:10px 80px;
+	margin: 30px auto;
+}
+
+#cards {
+	width:100%;
+	max-width: 600px;
+	margin:60px auto 0;
+}
+
+#cards .card {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	position: relative;
+	float:left;
+	width:41%;
+	text-align: center;
+}
+
+#card1 {
+	margin-left: 7%;
+	margin-right: 1.5%;
+	cursor: pointer; 
+}
+#card2 {
+	margin-left: 1.5%;
+	margin-right: 7%;
+	cursor: pointer; 
+}
+
+#cards .card .text {
+	display: inline-block;
+}
+
+#cards .card .text p {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	width:100%;
+	max-width: 200px;
+	height: 330px;
+	color : white;
+	font-weight: 500;
+	font-size: 1.8em;
+	text-shadow: 2px 2px #000000;
+}
+
+#cards .imgbox {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	text-align: center;
+}
+
+#birth_wrap {
+	display: none;
+	margin: 0 auto;
+	width: 400px;
+	height: 100px;
+	background-image: url(./imgs/birthdate_input_bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#birth_wrap input {
+	width: 330px;
+    height: 70px;
+    margin-top: 6px;
+    background-color: transparent;
+    margin-left: 51px;
+    font-size: 3em;
+    letter-spacing: 0.54em;
+    color: white;
+    border: none;
+}
+
+.imgbox img {
+	width:100%;
+	max-width: 300px;
+}
+
+#pre_info .quiz_bottom, #quiz_box .quiz_bottom {
+	position: absolute;
+	left:0;
+	bottom:-10%;
+	width:100%;
+}
+
+.quiz_bottom {
+	height: 61px;
+	
+}
+
+.quiz_bottom .bg_line {
+	background-image: url(./imgs/bottom_line.jpg);
+	background-size: 100% 9px;
+    background-repeat:   repeat-x;
+    background-position: center center;
+	height:8px;
+}
+
+.quiz_bottom .text {
+	text-align: center;
+	font-size: 0.8em;
+	padding-top: 27px;
+	font-weight: 600;
+	color: #555;
+}
+
+#analyzing {
+	display: none;
+	height: 100%
+}
+
+#analyzing .top_red {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	background-color: red;
+	    position: relative;
+    color: white;
+    width: 100%;
+    height: 40%;
+}
+
+#analyzing .bottom_wrap {
+	position: absolute;
+	bottom: 37px;
+    width: 100%;
+}
+
+#analyzing .info1 {
+	font-size: 1.5em;
+    text-align: center;
+}
+
+#analyzing .info2 {
+	margin-top: 10px;
+	font-size: 0.8em;
+	text-align: center;
+	font-weight: 100;
+}
+
+#analyzing .bottom_white .info1 {
+	padding-top:26px;
+	font-size:0.9em;
+	color: red;
+	font-weight: 600;
+}
+
+#analyzing .process_box {
+	text-align: center;
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    color: gray;
+}
+
+#analyzing .bottom_log {
+	position: absolute;
+    bottom: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+#analyzing .bottom_log img {
+	width: 50px;
+}
+
+#result_kyobo {
+	display: none;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+#you_are {
+	padding-top:15px;
+	font-family: 'Noto Sans KR', sans-serif
+}
+#you_are p {
+	text-align: center;
+    max-width: 310px;
+    margin: 0 auto;
+}
+
+#you_are .you {
+	padding-top:25px;
+	font-weight: 600;
+	font-size:1.1em;
+}
+
+#you_are .mbti {
+	font-size:2.8em;
+	font-weight: 600;
+	max-width: 600px;
+	background-image: -webkit-linear-gradient(left, #500, #f00, #500);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#you_are .description {
+	padding-top:20px;
+}
+#you_are .check_print {
+	padding-top:25px;
+	font-size:0.8em;
+	color:red;
+}
+#you_are img {
+	display: block;
+	margin:10px auto;
+}
+#you_are .zone {
+	height:170px;
+}
+#you_are .hobybox {
+	width:100px;
+}
+
+#event {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding:0 10px;
+	max-width:400px;
+	margin:40px auto 20px;
+	display: none;
+}
+#event .frame_bg {
+	width:100%;
+	display: block;
+}
+#event .event_txt {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background-color: #eeeeed;
+	padding:0 20px;
+	text-align: center;
+}
+#event .txt1 {
+	font-weight: 600;
+	line-height: 1.9em;
+}
+#event .txt2 {
+	margin-top:10px;
+	font-size:0.9em;
+	color:#999;
+}
+
+#event_name {
+	background-image: url(./imgs/event_name_bg.png)
+}
+#event_contact {
+	background-image: url(./imgs/event_contact.png)
+}
+#event .input-container {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height:43px;
+    margin-top:10px;
+}
+#event .input-container input{
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+    height:43px;
+    font-size:1.5em;
+    line-height:28px;
+    border:none;
+    background:transparent;
+    padding-left:120px;
+    width:100%;
+}
+
+#event_apply {
+	margin-top:20px;
+}
+
+#kyobo_info {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding:0 10px;
+	max-width:400px;
+
+    margin: 50px auto 10px;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 0.8em;
+    color:#777;
+}
+#kyobo_info span {
+	font-weight: 600;
+	color:black;
+}
+
+#result_normal .quiz_bottom, #result_kyobo .quiz_bottom {
+	margin-top: 40px;
+	height:79px;
+}
+
+
+#result_normal {
+	display: none;
+}
+
+#result_normal .top_you {
+	width:100%;
+	background-image: url(./imgs/index_background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+    position: relative;
+}
+
+#result_normal .bg_black {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	/*opacity: 0.3;*/
+}
+
+#result_normal #mbti_title {
+	color: white;
+	font-size: 3.3em;
+	text-align: center;
+	font-weight: 500;
+	padding-top: 120px;
+    position: relative;
+    /*text-shadow: 2px 2px #000000;*/
+}
+
+#result_normal #mbti_info1 {
+	text-align: center;
+    color: white;
+    max-width: 350px;
+    font-style: italic;
+    margin: 30px auto 0;
+    padding-bottom: 120px;
+    font-size: 1.2em;
+    position: relative;
+    /*text-shadow: 1px 1px #000000;*/
+}
+
+#result_normal .wrap {
+	max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#result_normal .you_are {
+	margin-top: 30px;
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#result_normal .you_hobby {
+	margin-top: 80px;
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#result_normal .mbti_hero_ment {
+	width: 100%;
+    background-image: url(./imgs_mbti/result_bg_space.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+#result_normal #mbti_info4 {
+	text-align: center;
+	max-width: 350px;
+	margin: 0 auto;
+	padding-top: 60px;
+	line-height: 2em;
+	font-style: italic;
+	/*font-weight: 200;*/
+	font-size: 1.1em;
+	padding-bottom: 40px;
+}
+
+
+@media screen and (max-height: 620px) {
+	#progress {
+		padding-top:18px;
+	}
+	#quiz_title {
+		margin:7px auto;
+	}
+	#cards {
+		margin:15px auto 0;
+	}
+}
+
+@media screen and (max-height: 820px) {
+	#progress {
+		padding-top:36px;
+	}
+	#quiz_title {
+		margin:15px auto;
+	}
+	#cards {
+		margin:30px auto 0;
+	}
+}
+
+@media screen and (min-width: 760px) {
+	#you_are {
+		font-size:25px;
+	}
+	#you_are p {
+		max-width:390px;
+	    margin: 20px auto;
+	}
+	#you_are .zone {
+		height:230px;
+	}
+	#you_are .hobybox {
+		width:150px;
+	}
+}
+
+@media screen and (min-width: 590px) {
+	#you_are {
+		font-size:20px;
+	}
+	#you_are p {
+		max-width:350px;
+	    margin: 20px auto;
+	}
+	#you_are .zone {
+		height:200px;
+	}
+	#you_are .hobybox {
+		width:120px;
+	}
+}
+
+
+@media screen and (max-width: 550px) {
+	#pre_info .hobylogo, #quiz_box .hobylogo, #result_kyobo .hobylogo {
+		height:50px;
+	}
+	.hobylogo img {
+		height:35px;
+	}
+	#quiz_box .spacer {
+		height: 11%;
+	}
+	#cards .card .text p {
+		height:290px;
+	}
+}
+
+@media screen and (max-width: 490px) {
+	#quiz_box .spacer {
+		height: 10%;
+	}
+	#cards .card .text p {
+		height:250px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.infobox {
+		margin:15px 5px 0;
+	}
+	.infobox .left {
+		width:25px;
+	}
+	.infobox .right {
+		font-size : 0.8em;
+		padding-left:30px;
+	}
+	#quiz_box .spacer {
+		height: 10%;
+	}
+	#cards .card .text p {
+		height:200px;
+		width:120px;
+		font-size: 1.4em
+	}
+	#event .input-container input {
+		padding-left:110px;
+	}
+}

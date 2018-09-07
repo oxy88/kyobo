@@ -1,0 +1,1351 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
+* {
+	margin:0;
+	padding:0;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+html, body {
+	height:100%;
+}
+
+input:focus {
+	outline: none;
+    outline-width: 0;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+#user_data {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	display: none;
+	background-color: wheat;
+    z-index: 400;
+}
+
+#user_data p {
+	margin-top: 14px;
+}
+#image_load {
+	display: none;
+	position: fixed;
+	top:0;left:0;
+	background-color: gray;
+	z-index: 300;
+}
+#image_load img {
+	width:80px;
+	height:80px;
+	float:left;
+}
+
+.user_data_close {
+	width: 50px;
+    /* height: 50px; */
+    margin: 0 auto;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+}
+#home_box {
+	width:100%;
+	height:100%;
+}
+
+#home_box .hobylogo {
+	/*padding-top: 35px;*/
+	height: 75px;
+}
+
+#top_box {
+	background-image: url(./imgs/index_background.jpg);
+	background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    height:86%;
+    position: relative;
+}
+
+.hobylogo {
+	padding-top:15px;
+	text-align: center;
+	height:70px;
+	
+}
+.hobbylab {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	bottom: 30px;
+}
+.hobbylab img {
+	width:200px;
+}
+
+.phase2 .hobylogo {
+	background-image: url(./imgs/index_background.jpg);
+	background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: top center;
+    height:90px;
+    position: relative;
+}
+
+.hobylogo img {
+	height:70px;
+}
+
+#text_findyourhobby {
+	width:100%;
+	text-align: center;
+}
+#text_findyourhobby.spacer {
+	
+}
+#text_findyourhobby img {
+	width:61%;
+	max-width: 468px;
+}
+
+#btn_start {
+	width:100%;
+	text-align: center;
+}
+
+#btn_start img {
+	width:44%;
+	max-width: 337px;
+	cursor: pointer; 
+}
+
+img.center_layout {
+
+}
+
+
+#bottom_box {
+	height:14%;
+    text-align: center;
+}
+
+.infobox {
+    width: 28%;
+    display: inline-block;
+    vertical-align:top;
+    margin: 35px 5px 0;
+}
+
+.infobox .left {
+	position: absolute;
+	width:50px;
+}
+.infobox .right {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	/*display: table-cell;*/
+	vertical-align: middle;
+    font-size: 0.8em;
+    text-align: left;
+    width:100%;
+    padding-left: 60px;
+    height:50px;
+}
+
+.infobox .left img {
+	width:100%;
+}
+
+
+#pre_info {
+	display: none;
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 89%;
+}
+
+.event {
+	margin:0 auto;
+	max-width:500px;
+}
+
+.event .event_title {
+	font-size: 1.4em;
+	font-weight: 800;
+	text-align: center;
+	color: red;
+	margin-top: 60px;
+}
+
+.event .line_red {
+	width: 45px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.event .info1 {
+	font-size: 0.9em;
+    text-align: center;
+    max-width: 350px;
+    margin: 30px auto 0;
+    font-weight: 600;
+}
+
+.event .info2 {
+	font-size: 0.7em;
+	text-align: center;
+	color: #777;
+	max-width: 250px;
+    margin: 30px auto 40px;
+}
+
+
+.event .input_wrap {
+	margin:20px auto;
+	max-width:350px;
+	height:50px;
+    border: 1px solid #999;
+    border-radius: 25px;
+}
+
+.event .input_title {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    background-color: #999;
+    border-radius: 24px 0 0 24px;
+    color: white;
+    position: absolute;
+    width: 100px;
+    height: inherit;
+    padding-top: 15px;
+    font-size: 0.8em;
+    text-align: center;
+    /*font-weight: 100;*/
+}
+.event .input_txt {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	position: relative;
+	width:100%;
+	height:inherit;
+	padding-left: 110px;
+	padding-right:20px;
+}
+
+.event .input_txt input {
+	width:100%;
+	height:inherit;
+	border: none;
+	font-size:1.4em;
+	background-color: transparent;
+}
+
+.event .btn_wrap {
+	margin: 45px auto 0;
+	max-width: 400px;
+    overflow: hidden;
+    padding-left: 12px;
+}
+
+.event .btn_box {
+	display: table-cell;
+	vertical-align: middle;
+	color:white;
+	padding: 10px;
+	text-align: center;
+    height: 60px;
+    font-weight: 600;
+}
+
+.btn_box.red {
+	background-color: red;
+}
+
+.event .btn_box.gray {
+	background-color: #777;
+	padding:10px 20px;
+}
+.event .btn_box p.btn_title {
+	font-size:0.9em;
+}
+.btn_box p.btn_info {
+	font-size: 0.6em;
+    /*font-weight: 100;*/
+}
+
+#quiz_box_new {
+	display: none;
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 89%;
+}
+
+#quiz_box_new .q_item {
+	width: 90%;
+	max-width:500px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px;
+    display: table;
+}
+
+#quiz_box_new .q_item p {
+	height:80px;
+	display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#quiz_box_new #ncard1 {
+    background-color: #333;
+}
+
+#quiz_box_new #ncard2 {
+	background-color: #444;
+}
+
+
+
+#quiz_box {
+	display: none;
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	/*height: 89%;*/
+    /*overflow: hidden;*/
+}
+
+#quiz_whiteback {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width:100%;
+	height: 92%;
+	background-color: white;
+    position: relative;
+}
+
+#quiz_box .back_btn {
+    position: absolute;
+    top: 28px;
+    left: 16px;
+    /* width: 120px; */
+    /* vertical-align: middle; */
+    /*background-color: #b5b5b5;
+    padding: 7px 10px;
+    color: white;
+    border-radius: 25px;*/
+    cursor: pointer;
+    display: none;
+    user-select: none;
+}
+
+#quiz_box .back_btn img {
+	/*width: 35px;
+	vertical-align: middle;
+	margin-right: 10px;*/
+	width: 45px;
+    height: 45px;
+}
+
+#progress {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	text-align: center;
+	width:100%;
+	font-weight: 500;
+	font-size: 1.1em;
+	padding:10px;
+	padding-top: 33px;
+}
+
+#progress .now {
+	font-size: 1.3em;
+	color: red;
+}
+
+.red_bottom_line {
+	width: 35px;
+	height: 2px;
+	border-bottom: 1px solid red;
+	margin: 0 auto;
+}
+
+#quiz_title {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	text-align: center;
+	width:100%;
+	font-weight: 500;
+	max-width: 700px;
+	font-size: 1.5em;
+	padding:10px 80px;
+	margin: 30px auto;
+}
+
+#cards {
+	width:100%;
+	max-width: 600px;
+	margin:60px auto 0;
+	overflow: hidden;
+	min-height: 200px;
+	font-size:14px;
+}
+
+#cards .card {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	position: relative;
+	float:left;
+	width:41%;
+	text-align: center;
+	height: auto;
+}
+
+#cards .card .card_on {
+	display: none;
+}
+
+#cards .card.on .card_on {
+	display: block;
+}
+
+#card1 {
+	margin-left: 7%;
+	margin-right: 1.5%;
+	cursor: pointer; 
+}
+#card2 {
+	margin-left: 1.5%;
+	margin-right: 7%;
+	cursor: pointer; 
+}
+
+#cards .card .text {
+	display: inline-block;
+	height: auto;
+}
+
+#cards .card .text p {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	width:100%;
+	max-width: 200px;
+	height: 330px;
+	color : white;
+	font-weight: 500;
+	font-size: 1.8em;
+	text-shadow: 2px 2px #000000;
+	padding: 0 20px;
+}
+
+#cards .imgbox {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	text-align: center;
+}
+
+#birth_wrap {
+	display: none;
+	margin: 30px auto 0;
+	width: 400px;
+	height: 100px;
+	background-image: url(./imgs/birthdate_input_bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#birth_wrap input {
+	width: 330px;
+    height: 70px;
+    margin-top: 6px;
+    background-color: transparent;
+    margin-left: 51px;
+    font-size: 3em;
+    letter-spacing: 0.54em;
+    color: white;
+    border: none;
+}
+
+.imgbox img {
+	width:100%;
+	max-width: 300px;
+	position: absolute;
+    left: 0;
+}
+
+#pre_info .quiz_bottom, #quiz_box .quiz_bottom {
+/*	position: absolute;
+	left:0;*/
+	width:100%;
+}
+
+.quiz_bottom {
+	height: 40px;
+	/*margin-top: -20px;*/
+	font-size: 0.8em;
+	
+}
+
+.quiz_bottom .bg_line {
+	background-image: url(./imgs/bottom_line.jpg);
+	background-size: 100% 9px;
+    background-repeat:   repeat-x;
+    background-position: center center;
+	height:6px;
+}
+
+.quiz_bottom .text {
+	text-align: center;
+	font-size: 0.8em;
+	padding-top: 12px;
+	font-weight: 600;
+	color: #555;
+}
+
+#analyzing {
+	display: none;
+	height: 100%
+}
+
+#analyzing .top_red {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	background-color: red;
+    position: relative;
+    color: white;
+    width: 100%;
+    height: 47%;
+}
+
+#analyzing .bottom_wrap {
+	position: absolute;
+	bottom: 37px;
+    width: 100%;
+}
+
+#analyzing .info1 {
+	font-size: 1.5em;
+    text-align: center;
+}
+
+#analyzing .info2 {
+	margin-top: 10px;
+	font-size: 0.9em;
+	text-align: center;
+	font-weight: 400;
+}
+
+#analyzing .bottom_white .info1 {
+	padding-top:26px;
+	font-size:0.9em;
+	color: red;
+	font-weight: 600;
+}
+
+#analyzing .process_box {
+	text-align: center;
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    color: gray;
+}
+
+#analyzing .bottom_log {
+	position: absolute;
+    bottom: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+#analyzing .bottom_log img {
+	width: 50px;
+}
+
+#result_kyobo {
+	display: none;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+#result_kyobo .hobbylab_log {
+	height: 54px;
+    margin-top: 8px;
+}
+#result_kyobo .packbox {
+	text-align: center;
+}
+#result_kyobo .pack {
+	display: inline-block;
+    margin: 0 5px;
+    vertical-align: bottom;
+}
+#result_kyobo .pack p {
+    font-size: 1.1em;
+	font-weight: 600;
+	line-height: 1em;
+	background: -webkit-linear-gradient(#ccc, #bbb, #ccc);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-top:5px;
+}
+#result_kyobo .pack img {
+	width: 100px;
+}
+#result_kyobo .pack.plus {
+	display: inline-block;
+	vertical-align: bottom;
+}
+#result_kyobo .pack.plus p {
+    margin-bottom: 95px;
+    font-size: 3em;
+    font-weight: 900;
+    color: #d6d7d9;
+}
+
+#kyobo_btn_back {
+    width: 220px;
+    margin: 40px auto 50px;
+    text-align: center;
+    color: #b5b4b4;
+    cursor: pointer;
+    
+    /*zoom: 1;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 50px auto 55px;
+    
+    border: 1px solid #bbb;
+    overflow: visible;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #555;
+    background-color: #ddd;
+    background-image: linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0)), url(data:image/png;base64,iVBORw0KGg[...]QmCC);
+    transition: background-color .2s ease-out;
+    background-clip: padding-box;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+    text-shadow: 0 1px 0 rgba(255,255,255, .9);*/
+}
+#kyobo_btn_back img {
+	width: 50px;
+    /* display: inline-block; */
+    vertical-align: middle;
+    padding-right: 10px;
+}
+#kyobo_btn_back:hover{
+  /*background-color: #eee;
+  color: #555;*/
+}
+
+#you_are {
+	padding-top:15px;
+	font-family: 'Noto Sans KR', sans-serif
+}
+#you_are p {
+	text-align: center;
+    max-width: 310px;
+    margin: 0 auto;
+}
+
+#you_are .you {
+	padding-top:25px;
+	font-weight: 600;
+	font-size:1.1em;
+}
+
+#you_are .mbti {
+	font-size:2.8em;
+	font-weight: 600;
+	max-width: 600px;
+	background-image: -webkit-linear-gradient(left, #500, #f00, #500);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#you_are .description {
+	padding-top:20px;
+}
+#you_are .check_print {
+	padding-top:25px;
+	font-size:0.8em;
+	color:red;
+    font-weight: 600;
+}
+#you_are img {
+	display: block;
+	margin:10px auto;
+}
+#you_are .zone {
+	height:170px;
+	margin-bottom: -5px;
+}
+#you_are .hobybox {
+	width:100px;
+}
+
+#you_are .gray_line {
+	width: 70px;
+	height: 1px;
+	margin: 40px auto 20px;
+	border-top: 2px solid #dadada;
+}
+
+#event {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding:0 10px;
+	max-width:400px;
+	margin:40px auto 20px;
+	display: none;
+}
+#event .frame_bg {
+	width:100%;
+	display: block;
+}
+#event .event_txt {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background-color: #eeeeed;
+	padding:0 20px;
+	text-align: center;
+}
+#event .txt1 {
+	font-weight: 600;
+	line-height: 1.9em;
+}
+#event .txt2 {
+	margin-top:10px;
+	font-size:0.9em;
+	color:#999;
+}
+
+#event_name {
+	background-image: url(./imgs/event_name_bg.png)
+}
+#event_contact {
+	background-image: url(./imgs/event_contact.png)
+}
+#event .input-container {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height:43px;
+    margin-top:10px;
+}
+#event .input-container input{
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+    height:43px;
+    font-size:1.5em;
+    line-height:28px;
+    border:none;
+    background:transparent;
+    padding-left:120px;
+    width:100%;
+}
+
+#event_apply {
+	margin-top:20px;
+}
+
+#kyobo_info {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding:0 10px;
+	max-width:400px;
+
+    margin: 50px auto 10px;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 0.8em;
+    color:#777;
+}
+#kyobo_info span {
+	font-weight: 600;
+	color:black;
+}
+
+#result_normal .quiz_bottom, #result_kyobo .quiz_bottom {
+	margin-top: 40px;
+	height:40px;
+}
+
+
+#result_normal {
+	display: none;
+}
+
+#result_normal .top_you {
+	width:100%;
+	background-image: url(./imgs/index_background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+    position: relative;
+}
+
+#result_normal .bg_black {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	/*opacity: 0.3;*/
+}
+
+#result_normal #mbti_title {
+	color: white;
+	font-size: 3.3em;
+	text-align: center;
+	font-weight: 500;
+	padding-top: 120px;
+    position: relative;
+    /*text-shadow: 2px 2px #000000;*/
+}
+
+#result_normal #mbti_info1 {
+	text-align: center;
+    color: white;
+    max-width: 350px;
+    font-style: italic;
+    margin: 30px auto 0;
+    padding-bottom: 120px;
+    font-size: 1.2em;
+    position: relative;
+    /*text-shadow: 1px 1px #000000;*/
+}
+
+#result_normal .wrap {
+	max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#result_normal .you_are {
+	margin-top: 30px;
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+#result_normal .you_hobby {
+	margin-top: 80px;
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+#result_normal .giftbox {
+	background-image: url(./imgs/giftbox_small.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding-left: 45px;
+}
+
+#result_normal .mbti_hero_ment {
+	width: 100%;
+    background-image: url(./imgs_mbti/result_bg_space.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+#result_normal #mbti_info4 {
+	text-align: center;
+	max-width: 350px;
+	margin: 0 auto;
+	padding-top: 60px;
+	line-height: 2em;
+	font-style: italic;
+	/*font-weight: 200;*/
+	font-size: 1.1em;
+	padding-bottom: 40px;
+}
+
+#result_normal .read_prt {
+	color: red;
+	font-weight: 600;
+	margin-top: 30px;
+}
+
+#result_normal .hero3 {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+#result_normal .herobox, #result_normal .arrow {
+	width: 33%;
+	float:left;
+	position: relative;
+}
+
+#result_normal .curator .herobox {
+	height:300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+#result_normal .curator .herobox img {
+	display: none;
+}
+
+#result_normal .herobox img {
+	width:100%;
+}
+
+#result_normal .hero_txt_box {
+	box-sizing: border-box;   
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	position: absolute;
+	bottom: 0;
+	
+	width: 100%;
+	padding:0 20px;
+    text-align: center;
+}
+
+#result_normal .herobox .white_back {
+	background-color: white;
+	width:100%;
+    padding-top: 10px;
+}
+
+#result_normal .hero_name {
+	font-size: 0.9em;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+}
+
+#result_normal .hero_detail {
+	font-size: 0.9em;
+	font-style: italic;
+}
+
+#result_normal .hero3 .clear {
+	clear:both;
+	height:20px;
+}
+
+#result_normal .line1, #result_normal .line2 {
+    width: 20px;
+	margin:0 auto;
+	background-color: #eaeaea;;
+}
+#result_normal .line1 {
+	height:60px;
+}
+#result_normal .line2 {
+	height:180px;
+	display: none;
+}
+
+#result_normal .tri1 {
+	position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -30px;
+    width: 60px;
+}
+
+#result_normal .tri2 {
+	width: 60px;
+    margin: 0 auto;
+    display: none;
+}
+#result_normal .tri1 img, #result_normal .tri2 img {
+	width:100%;
+}
+
+#result_normal .arrow.red .line1 {
+	background-color: #fdd5d5;
+}
+
+#result_normal .arrow.gray .tri1 {
+	display: none;
+}
+
+#result_normal .arrow.gray .line2, #result_normal .arrow.gray .tri2 {
+	display: block;
+}
+
+
+
+#result_normal .in_store {
+	background-color: #ffe4e4;
+    width: 80%;
+    padding: 10px 0;
+    position: absolute;
+    top: 420px;
+    left: 10%;
+    /*border-radius: 20px;*/
+
+    text-align: center;
+    color: red;
+    font-weight: 600;
+    font-size: 0.9em;
+
+    box-sizing: border-box;   
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#result_normal .online_store {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #eaeaea;
+	/*border-radius: 20px;*/
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+#subscribe_news {
+	display: block;
+
+}
+
+#subscribe_news p.btn_title {
+	padding-top:8px;
+	font-size: 1em;
+}
+
+
+.goto_new {
+	margin: 0 auto;
+	width: 360px;
+	text-align: center;
+	font-weight: 500;
+}
+.goto_new .and {
+    font-size: 0.8em;
+    line-height: 3.1em;
+}
+.goto_new .pleaseGoTo {}
+.goto_new .rrr {
+	color:red;
+}
+img#newzone {
+	width: 200px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+
+#thankyou {
+	display: none;
+	background-image: url(./imgs/index_background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 100%;
+}
+
+#thankyou #circle {
+	width: 300px;
+	height: 300px;
+	background-color: red;
+	/* opacity: 0.5; */
+	color: white;
+	border-radius: 150px;
+	text-align: center;
+	padding-top: 112px;
+	box-sizing: border-box;
+	margin: 30% auto;
+	font-size: 3em;
+}
+
+.hobyurl {
+	letter-spacing: 1px;
+	font-size: 0.9em;
+	font-weight: 600;
+}
+
+@media screen and (min-width: 760px) {
+	#you_are {
+		font-size:25px;
+	}
+	#you_are p {
+		max-width:390px;
+	    margin: 20px auto;
+	}
+	#you_are .zone {
+		height:230px;
+	}
+	#you_are .hobybox {
+		width:150px;
+	}
+}
+
+@media screen and (min-width: 590px) {
+	#you_are {
+		font-size:20px;
+	}
+	#you_are p {
+		max-width:350px;
+	    margin: 20px auto;
+	}
+	#you_are .zone {
+		height:200px;
+		margin-bottom: -25px;
+	}
+	#you_are .hobybox {
+		width:120px;
+	}
+}
+
+
+@media screen and (max-width: 550px) {
+	.phase2 .hobylogo {
+		height:50px;
+	}
+	.hobylogo img {
+		height:35px;
+	    margin-top: 1px;
+	}
+	#quiz_box .back_btn {
+		top:15px;
+	}
+	#quiz_box .back_btn img {
+		width: 30px;
+		height: 30px;
+	}
+
+	#quiz_box .spacer {
+		height: 11%;
+	}
+	#cards {
+		font-size:12px;
+	}
+	#cards .card .text p {
+		height:290px;
+	}
+	#result_kyobo .hobbylab_log {
+		margin:0;
+		height:39px;
+	}
+	.infobox {
+	    width: 29%;
+	    margin: 10px 5px 0;
+	}
+	.infobox .left {
+	    width: 40px;
+	}
+	.infobox .right {
+		font-size: 0.7em;
+		padding-left: 48px;
+	}
+}
+
+@media screen and (max-width: 490px) {
+	#quiz_box .spacer {
+		height: 10%;
+	}
+	#cards .card .text p {
+		height:250px;
+	}
+}
+@media screen and (max-width: 400px) {
+	#top_box {
+	    /*height: 80%;*/
+	}
+	.infobox {
+	    width: 29%;
+		margin:15px 5px 0;
+	}
+	.infobox .left {
+		width:34px;
+	}
+	.infobox .right {
+		font-size: 0.4em;
+		padding-left: 39px;
+		letter-spacing: -0.1em;
+	}
+	#quiz_box .spacer {
+		height: 10%;
+	}
+	#cards .card .text p {
+		height:200px;
+		width:120px;
+		font-size: 1.4em
+	}
+	#event .input-container input {
+		padding-left:110px;
+	}
+	#birth_wrap {
+		width: 320px;
+		height: 86px;
+		/*margin: 10px auto 0;*/
+	}
+	#birth_wrap input {
+		width: 275px;
+	    margin-left: 39px;
+	    letter-spacing: 0.32em;
+        margin-top: 2px;
+	}
+}
+
+@media screen and (max-width: 321px) {
+	.infobox {
+		width: 29%;
+		margin-top: 5px;
+	}
+	.infobox .right {
+		/*font-size:0.7em;*/
+	    font-size: 0.4em;
+	}
+	#cards .card .text p {
+		height:180px;
+	}
+
+	#cards .card .text p.ql23 {
+		/*font-size:1.3em;*/
+	}
+	#cards .card .text p.ql32 {
+		/*font-size:1.2em;*/
+	}
+
+	#you_are .zone {
+	    margin-left: -13px;
+	}
+	#result_kyobo .pack img {
+	    /*width: 115px;*/
+	}
+	#you_are .mbti {
+	    font-size: 1.9em;
+	}
+}
+
+.auto_spacer1 {
+	height:50px;
+}
+
+
+@media screen and (max-height: 820px) {
+	#progress {
+		padding-top:16px;
+	}
+	#quiz_title {
+	    margin: 15px auto 5px;
+	    padding: 10px 30px;
+	    font-size:1.4em;
+	}
+	#cards {
+		margin:15px auto 0;
+	}
+}
+
+@media screen and (max-height: 630px) {
+	#quiz_title {
+		font-size: 1em;
+	    padding: 0;
+	    margin: 0;
+	    padding-top: 11px;
+	    font-weight: 500;
+	}
+	#progress {
+		padding-top:6px;
+	}
+	#quiz_title {
+		padding-top:0;
+	}
+	#cards {
+		margin: 10px auto 0;
+	}
+	#pre_info .quiz_bottom, #quiz_box .quiz_bottom {
+		position: relative;
+		border: inherit;
+		left: inherit;
+		/*height:82px;*/
+	}
+	.auto_spacer1 {
+		height:30px;
+	}
+	.infobox {
+	    margin-top:10px;
+	}
+}
+
+@media screen and (max-height: 620px) {
+	#quiz_box {
+		height:auto;
+	}
+	#quiz_title {
+		margin:7px auto;
+	    padding-top: 18px;
+	}
+	#progress {
+		padding-top:10;
+	}
+	#quiz_whiteback {
+		height:auto;
+	}
+	.quiz_bottom .text {
+		/*padding-top:19px;*/
+	}
+	#cards {
+		margin:5px auto 0;
+	}
+}
+
+@media screen and (max-height: 470px) {
+	#text_findyourhobby .spacer {
+		height: 0;
+	}
+	.auto_spacer1 {
+		height:0;
+	}
+}
+
+@media screen and (min-height: 700px) {
+	#pre_info .quiz_bottom, #quiz_box .quiz_bottom {
+        /*bottom: -30px;*/
+	}
+}

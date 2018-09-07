@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="naver-site-verification" content="155fdfc3bb8d37ea1a439ef0dac7e614c5a11e65"/>
+	<meta name="google-site-verification" content="aDTsJIdA-nqIxgTl--QZaaD1YK7JvGz5vz-drzupYuw" />
+
+	<title>교보문고×하비박스</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+
+</head>
+<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
+	<div id="user_data">
+		<div class="user_data_close">닫기</div>
+		<div class="data"></div>
+	</div>
+	<div id="image_load">
+	
+	</div>
+	<div id="home_box">
+		<div id="top_box">
+			<div class="hobylogo">
+				<img src="./imgs/logo_hobybox.png" alt="" class="center_layout">
+			</div>
+			<div id="text_findyourhobby">
+				<div class="spacer">&nbsp;</div>
+				<img src="./imgs/text_findyourhobby.png" alt="" class="center_layout">				
+			</div>
+			<div id="btn_start">
+				<div class="spacer">&nbsp;</div>
+				<img src="./imgs/index_start.png" alt="" class="center_layout">
+			</div>
+			<!-- <div class="hobbylab">
+				<img src="/imgs/logo_hobbylab.png" alt="">
+			</div> -->
+		</div>
+		<div id="bottom_box">
+			<div id="info1" class="infobox">
+				<div class="left">
+					<img src="./imgs/index_1.png" alt="">
+				</div>
+				<div class="right">총 검사 시간은 1분 내외입니다.</div>
+			</div>
+			<div id="info2" class="infobox">
+				<div class="left">
+					<img src="./imgs/index_2.png" alt="">
+				</div>
+				<div class="right">혹 질문이 마음에 들지 않더라도 정직하게 답하세요.</div>
+			</div>
+			<div id="info3" class="infobox">
+				<div class="left">
+					<img src="./imgs/index_3.png" alt="">
+				</div>
+				<div class="right">희망 속 자신이 아닌 진짜 자신을 선택하세요.</div>
+			</div>
+		</div>
+	</div>
+	<div id="pre_info" class="phase2">
+		<div class="hobylogo">
+			<img src="./imgs/logo_hobybox.png" alt="" class="center_layout">
+		</div>
+		<div class="event">
+			<div class="event_title">E V E N T</div>
+			<div class="line_red"><img src="./imgs/line-red.png"></div>
+			<div class="info1">「하비박스」 의 취미분석테스트를 경험하신 분들 중 열 분을 추첨하여 랜덤 하비박스를 보내드립니다.</div>
+			<div class="info2">아래의 정보는 취미분석테스트 결과 제공과 당첨 알림을 위한 문자 발송용으로만 사용됩니다.</div>
+			<div class="input_wrap">
+				<div class="input_title">
+					성&nbsp;&nbsp;&nbsp;함
+				</div>
+				<div class="input_txt">
+					<input type="text" id="quiz_name">
+				</div>
+			</div>
+			<div class="input_wrap">
+				<div class="input_title">
+					연 락 처
+				</div>
+				<div class="input_txt">
+					<input type="text" id="quiz_contact">
+				</div>
+			</div>
+			<div class="btn_wrap">
+				<div id="quiz_start_red" class="btn_box red pointer">
+					<p class="btn_title">
+						테스트 후 결과 문자받기
+					</p>
+					<p class="btn_info">
+						이벤트 참여/마케팅개인정보 수집이용에 동의합니다.
+					</p>
+				</div>
+				<div class="btn_box">&nbsp;</div>
+				<div id="quiz_start_gray" class="btn_box gray pointer">
+					<p class="btn_title">
+						그냥 시작하기
+					</p>
+				</div>	
+			</div>
+			
+		</div>
+		<div class="quiz_bottom">
+			<div class="bg_line">&nbsp;</div>
+			<div class="text">
+				당신의 취미를 찾아주는 특별한 상자, 하비박스
+			</div>
+		</div>
+
+	</div>
+	<div id="quiz_box" class="phase2">
+		<div class="hobylogo">
+			<img src="./imgs/logo_hobybox.png" alt="" class="top_logo center_layout">
+			<div class="back_btn"><img src="/imgs/icon_back.png"></div>
+		</div>
+		<div id="quiz_whiteback">
+			<div class="auto_spacer1"></div>
+			<div id="quiz_title">다음 중 나의 성향과<br>더 가까운 것을 고르세요.</div>
+			<div class="red_bottom_line"></div>
+			<div id="progress"><span class="now">2</span> / <span id="all_quiz_num" onclick="reposition_bottom()">14</span></div>
+			<div id="cards">
+				<div class="card" id="card1">
+					<div class="imgbox">
+						<img src="./imgs/left_card_off.jpg" alt="">
+						<img src="./imgs/left_card_on.jpg" alt="" class="card_on">				
+					</div>
+					<div class="text">
+						<p>비약, 변화의<br>가능성을<br>추진한다.</p>
+					</div>
+				</div>
+				<div class="card" id="card2">
+					<div class="imgbox">
+						<img src="./imgs/right_card_off.jpg" alt="">
+						<img src="./imgs/right_card_on.jpg" alt="" class="card_on">
+					</div>
+					<div class="text"><p>순서를 정해<br>일을 추진한다.</p></div>
+				</div>
+			</div>
+			<div id="birth_wrap">
+				<form id="birth_form" onsubmit='go_analize()'>
+					<input type="tel" id="birth_date" maxlength="6">
+					<input type="submit" style="display: none;">
+				</form>
+			</div>
+		</div>
+		<div id="quiz_box_bottom_spacer">&nbsp;</div>
+		<div class="quiz_bottom" id="auto_bottom">
+			<div class="bg_line">&nbsp;</div>
+			<div class="text">
+				당신의 취미를 찾아주는 특별한 상자, 하비박스
+			</div>
+		</div>
+	</div>
+
+	<div id="analyzing">
+		<div class="top_red">
+			<div class="bottom_wrap">
+				<div class="info1">
+					감사하비낟.<br>
+					오늘도 하비한 하루되세요!
+				</div>
+				<div class="info2">
+					- 하비박스 드림.
+				</div>				
+			</div>
+		</div>
+		<div class="bottom_white">
+			<div class="info1">
+				검사 결과를 분석 중입니다.
+			</div>
+			<div class="process_box">
+				<span class="dot">●</span>
+				<span class="dot">●</span>
+				<span class="dot">●</span>
+				<span class="dot">●</span>
+				<span class="dot">●</span>
+			</div>
+			<div class="bottom_log">
+				<img src="./imgs/logo_hobybox_red.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div id="result_kyobo" class="phase2">
+		<div class="hobylogo">
+			<img src="./imgs/logo_hobbylab.png" alt="" class="center_layout hobbylab_log">
+		</div>
+		<div id="you_are">
+			<img class="zone" src="">
+			<p class="you">당신은</p>
+			<p class="mbti">"재기발랄한 활동가"</p>
+			<p class="description">창의적이며 항상 웃을 거리를 찾아다니는 활발한 성격으로 사람들과 자유롭게 어울리기를 좋아하는 넘치는 열정의 소유자</p>
+			<p class="check_print">당신의 성향에 맞는 리플렛을 가져가세요!</p>
+			<div class="gray_line"></div>
+			<div class="packbox">
+				<div class="pack">
+					<p>꼭 맞는 책이<br>궁금하다면?</p>
+					<img src="./imgs/result_pack_kyobo.png">
+				</div>
+				<div class="pack plus"><p>+</p></div>
+				<div class="pack">
+					<p>색다른 취미를<br>갖고 싶다면?</p>
+					<img src="./imgs/result_pack_hoby.png">
+				</div>
+			</div>
+		</div>
+		<div id="kyobo_btn_back"><img src="./imgs/icon_reload.png" alt=""></div>
+		<div class="quiz_bottom">
+			<div class="bg_line">&nbsp;</div>
+			<div class="text">
+				모두가 하비하는 그 날까지
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var isKyobo = true;
+	var isiOS = false;
+	var bottom_adjust = 68 - 20;
+	var user_data = [];
+	var detectBirth;
+
+	// if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+	// 	console.log('ios!');
+	// 	isiOS = true
+	// 	// bottom_adjust = 85;
+	// } else {
+	// 	console.log('not ios!');
+	// }
+
+	// var window_height = $("body").innerHeight();
+
+	var is_showing_back_confirm = false;
+
+	history.pushState(null, null, document.URL);
+	window.addEventListener('popstate', function () {
+	    history.pushState(null, null, document.URL);
+	    if (!is_showing_back_confirm) {
+		    is_showing_back_confirm = true;	    	
+			$.confirm({
+				boxWidth: '80%',
+			    useBootstrap: false,
+				closeIcon: true,
+				icon: 'fa fa-warning',
+			    title: '처음으로 가시겠습니까?',
+			    content: '',
+			    buttons: {
+			        ok: {
+	                    text: '처음으로',
+	                    btnClass: 'btn-blue',
+	                    action: function(){
+	                        reset_screen();
+	                        is_showing_back_confirm = false;
+	                    }
+	                },
+			        cancel: {
+	                    text: '취소',
+	                    action: function(){
+	                    	is_showing_back_confirm = false;
+	                    }
+	                }
+			    }
+			});
+	    }
+	});
+
+	
+	var bspacer = $("#quiz_box_bottom_spacer");
+	function reposition_bottom() {
+		// alert(window_height);
+		var window_height = $(window).height();
+		var spacer_position = bspacer.position().top;
+		// console.log(window_height, bottom_position, window_height-bottom_position-90);
+		bspacer.height(window_height-spacer_position-bottom_adjust);
+		// quiz_step_prt.append(window_height+'-'+bottom_position+'-'+);
+	}
+
+	// console.log('window_height', window_height);
+	// if (window_height < 630) {
+	// 	$("#quiz_box_bottom_spacer").height(window_height-468);
+	// 	console.log('spacer_height', $("#quiz_box_bottom_spacer").height());
+	// } else {
+	// 	$("#quiz_box_bottom_spacer").height(window_height-618);
+	// }
+	var isAdmin = false
+	var auto_goback_timer;
+	var auto_quiz_reset_timer;
+	if (window.location.href==='http://kyobo.hobybox.net/?a' || window.location.href==='http://kyobo.hobybox.net/test.html?a') {
+		isAdmin = true
+		$("#quiz_box .back_btn").show();
+		$("#quiz_box .back_btn").on('click', function(event) {
+			event.preventDefault();
+			/* Act on the event */
+			console.log(quiz_step);
+			if (quiz_step === 0) {
+				reset_screen()
+			} else {
+				quiz_step--;
+				set_quiz(quiz_step);
+			}
+		});
+
+	}
+
+	// -------- 첫화면, 로고, 하단 버튼 바인딩 -------------------------
+	var goFS = document.getElementById("info1");
+	goFS.addEventListener("click", function() {
+	    var doc = window.document;
+	      var docEl = doc.documentElement;
+
+	      var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+	      var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+	      if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+	        requestFullScreen.call(docEl);
+	      }
+	      else {
+	        cancelFullScreen.call(doc);
+	      }
+	}, false);
+
+
+	$(".user_data_close").on('click', function(event) {
+		event.preventDefault();
+		/* Act on the event */
+		$("#user_data").css('display', 'none');
+		$("#image_load").css('display', 'none');
+	});
+
+	// $(".hobylogo").on('click', function(event) {
+	// 	event.preventDefault();
+	// 	reset_screen();
+	// });
+
+	$("div.quiz_bottom, .hobylogo .top_logo, .hobylogo .hobbylab_log, #circle, #kyobo_btn_back").on('click', function(event) {
+		event.preventDefault();		
+		reset_screen();
+	});
+
+	function reset_screen() {
+		clearInterval(detectBirth);
+		clearTimeout(auto_goback_timer);
+		clearTimeout(auto_quiz_reset_timer);
+		$("#pre_info").css("display", "none");
+		$("#quiz_box").css("display", "none");
+		$("#analyzing").css("display", "none");
+		$("#result_kyobo").css("display", "none");
+		$("#result_normal").css("display", "none");
+		$("#thankyou").css("display", "none");
+
+		$("#home_box").css("display", "block");
+	}
+
+
+
+
+	var default_question = "당신의 성향과<br>더 가까운 것을 고르세요.";
+
+	var quiz_list = [
+		[["여자", "w"],["남자", "m"], "당신의<br>성별을 선택해주세요."], // 1
+		[["화가 나면 더 표현적인다.", "E"],["화가 나면 말이 더 없어진다.", "I"]], // 2
+		[["제작에 관심을 갖는 편이다.", "S"],["연구에 관심을 갖는 편이다.", "N"]], // 3
+		[["내 자신이 객관적일 때가 마음이 편하다.", "T"],["내 자신이 주관적일 때가 마음이 편하다.", "F"]], // 4
+		[["즉흥적이기보다는 신중한 편인다.", "J"],["신중하기보다는 즉흥적인 편인다.", "P"]], // 5
+		[["사람들을 연결하고 상호작용을 촉진하는 역할을 한다.", "E"],["사람들을 연결시키는 일을 잘 하지 않는 편이다.", "I"]], // 6
+		[["글을 쓸 때 사실에 충실하게 쓰는 것이 더 좋다.", "S"],["글을 쓸 때 비유적으로 쓰는 것이 더 좋다.", "N"]], // 7
+		[["결정을 내리기 전에 찬반 양 측면을 고려한다.", "T"],["결정을 내리기 전에 상황에 대한 좋고 나쁜 느낌을 고려한다.", "F"]], // 8
+		[["현재의 과제에 대한 세부 계획을 제대로 작성하고 시작하는 편이다.", "J"],["세부 계획 작성 없더라도 일단 시작하고 만들어나가는 편이다.", "P"]], // 9
+		[["집단 활동에 적극적이다.", "E"],["개인의 내적 활동에 적극적이다.", "I"]], // 10
+		[["실제 경험을 할 때가 보다 즐겁다.", "S"],["미래에 대한 상상의 나래를 펼 때가 보다 즐겁다.", "N"]], // 11
+		[["자신의 결정과 목적에 대한 확신이 중요하다.", "T"],["판단에 있어 사람 중심으로 결정하는 것이 중요하다.", "F"]], // 12
+		[["파티 참석 여부 결정은 미리 계획성 있게 하는 게 좋다.", "J"],["당일 날 상황을 봐서 닥쳤을 때 결정하는 게 좋다.", "P"]], // 13
+		[["", ""],["", ""],"당신이<br>태어난 순간은 언제인가요."] // 14
+	];
+
+	quiz_list = [
+		[["여자", "w"],["남자", "m"], "당신의<br>성별을 선택해주세요."], 
+		[["사람 사이 상호작용을 촉진하는 역할을 한다.", "E"], ["사람들을 연결시키는 일을 잘 하지 않는다.", "I"]],
+		[["만져지는, 정확한 사실에 근거한 정보를 선호한다.", "S"], ["독창적인, 관념을 선호한다.", "N"]],
+		[["공식이나 논리/통계적 방법 사용을 선호한다.", "T"], ["안다고 느끼나 왜 그런지 설명을 못하는 경우가 있다.", "E"]],
+		[["한 가지 씩 차근차근 계획한다.", "J"], ["중간에 뛰어 들어도 해결책이 있다고 본다.", "P"]],
+		[["인간관계 연결에 에너지를 투여한다.", "E"], ["본인에게 가치, 목적, 의미 있을 때는 움직인다.", "I"]],
+		[["있는 그대로 받아들이고 현실을 구축한다.", "S"], ["사실 자체보다는 그 이면의 가치가 중요하다.", "N"]],
+		[["결정을 내리기 전에 찬반 양 측면을 고려한다.", "T"], ["결정을 내리기 전에 상황에 대한 좋고 나쁜 느낌을 고려한다.", "F"]],
+		[["현재의 과제에 대한 세부 계획을 작성하는 편이다.", "J"], ["위험 부담을 감수하더라도 세부 계획 작성 없이 일단 시작한다.", "P"]],
+		[["타인에게 쉽게 알려지는 사람이다.", "E"], ["타인이 알기 어렵다고 느끼는 사람이다.", "I"]],
+		[["순서를 정해 일을 추진한다.", "S"], ["비약, 변화의 가능성을 추진한다.", "N"]],
+		[["자신의 결정과 목적에 대한 확신이 중요하다.", "T"], ["사람 중심으로 결정하는 것이 중요하다.", "F"]],
+		[["조직된, 정교한 계획을 선호한다.", "J"], ["과정에서 해결책을 유도한다.", "P"]],
+		[["화가 나면 더 표현적이다.", "E"], ["화가 나면 말이 더 없어진다.", "I"]],
+		[["직접적인 경험을 중시한다.", "S"], ["상상과 개념을 통한 새로운 발견을 중시한다.", "N"]],
+		[["자기와 다른 의견을 확인하고 명료화하는 편이다.", "T"], ["자기와 다른 의견이 나올 시 갈등을 축소하려는 경향이 있다.", "F"]],
+		[["기존 기술이나 방법을 선호한다.", "J"], ["기대하지 않았던 상황을 선호한다.", "P"]],
+		[["많은 사람들과 함께 하는 활동적인 관계를 선호한다.", "E"], ["소수의 중요한 사람과 깊은 관계를 맺는다.", "I"]],
+		[["실제적, 결과 중심/활용성에 흥미가 있다.", "S"], ["학문적 아이디어 중심/지식 추구 자체에 흥미가 있다.", "N"]],
+		[["정확한 질문, 정확한 파악을 선호한다.", "T"], ["질문은 상황을 불편하게 만드는 경우가 많다고 생각한다.", "F"]],
+		[["계획을 통한 효과성을 선호한다.", "J"], ["순발력을 발휘하여 순간에 결정하는 경우가 종종 있다.", "P"]],
+		[["자기 개방을 어렵지 않게 한다.", "E"], ["신뢰가 생겨야 자신을 개방한다.", "I"]],
+		[["실용적인 인사, 경력 위주의 인사 발령이 중요하다.", "S"], ["그 사람의 창의성, 비전에 역점을 둔 인사 발령이 중요하다.", "N"]],
+		[["회의적, 논평, 증명을 선호한다.", "T"], ["수용적, 신뢰로움을 선호한다.", "F"]],
+		[["행동보다 계획 자체를 즐긴다.", "J"], ["계획보다 행동과 자신의 데이터에 의존한다.", "P"]],
+		[["집단 활동에 적극적이다.", "E"], ["개인의 내적 활동에 적극적이다.", "I"]],
+		[["사실적, 세부적 기억력이 좋다.", "S"], ["사람보다 현상 이면의 이론 추진에 더 관심이 있다.", "N"]],
+		[["감정 개입 없이 논박을 선호한다.", "T"], ["칭찬과 용서 및 타인 허용을 선호한다.", "F"]],
+		[["일일, 주간, 월간, 연간 계획을 선호한다.", "J"], ["형식은 오히려 방해, 충동적인 것을 좋아한다.", "P"]],
+		[["생각, 아이디어를 강하게 주장하길 선호한다.", "T"], ["사람들이 좋아하는 방향으로 결정하길 선호한다.", "F"]],
+		[["계획을 짜고 일을 추진한다.", "J"], ["체계 안에 있을 때 답답하다.", "P"]],
+		[["결과 중심적이고 단호해 보인다.", "T"], ["따뜻한 사람으로 보인다. ", "F"]],
+		[["질서정연, 조직화를 선호한다.", "J"], ["되어있는 상황 그대로를 즐긴다.", "P"]],
+		[["", ""],["", ""],"당신이<br>태어난 순간은 언제인가요."]
+	];
+
+	$("#all_quiz_num").html(quiz_list.length);
+
+	var mbti_bible = {
+		"ESFP" : ["자유로운 영혼의 연예인", "주위에 있으면 인생이 지루할 새가 없을 정도로 즉흥적이며 열정과 에너지가 넘치는 연예인형", "a"],
+		"ESTP" : ["모험을 즐기는 사업가", "벼랑 끝의 아슬아슬한 삶을 진정으로 즐길 줄 아는 이들로 명석한 두뇌와 에너지, 뛰어난 직관력을 가지고 있는 유형", "a"],
+		"ISFP" : ["호기심 많은 예술가", "항시 새로운 것을 찾아 시도하거나 도전할 준비가 되어 있는 융통성 있는 성격의 매력 넘치는 예술가형", "b"],
+		"ESFJ" : ["사교적인 외교관", "타인을 향한 세심한 관심과 사교적인 성향으로 사람들 내에서 인기가 많으며, 타인을 돕는데 열성적인 세심형", "a"],
+		"ESTJ" : ["엄격한 관리자", "사물이나 사람을 관리하는 데 타의 추종을 불허하는 뛰어난 실력을 갖춘 관리자형", "a"],
+		"ISFJ" : ["용감한 수호자", "소중한 이들을 수호하는 데 심혈을 기울이는 헌신적이며 성실하나 방어자형", "b"],
+		"ISTJ" : ["청렴결백한 논리주의자", "사실에 근거하여 사고하며 이들의 행동이나 결정 사항에 한치의 의심을 사지 않는 현실주의자형", "b"],
+		"ENFP" : ["재기발랄한 활동가", "창의적이며 항상 웃을 거리를 찾아다니는 활발한 성격으로 사람들과 자유롭게 어울리기를 좋아하는 넘치는 열정의 소유자", "d"],
+		"ENFJ" : ["정의로운 사회운동가", "넘치는 카리스마와 영향력으로 청중을 압도하는 리더형", "d"],
+		"INFP" : ["열정적인 중재자", "상냥한 성격의 이타주의자로 건강하고 밝은 사회 건설에 앞장서는 낭만형", "c"],
+		"INFJ" : ["선의의 옹호자", "조용하고 신비로우며 샘솟는 영감으로 지칠 줄 모르는 이상주의자", "c"],
+		"ENTP" : ["뜨거운 논쟁을 즐기는 변론가", "지적인 도전을 두려워하지 않는 똑똑한 호기심형", "d"],
+		"ENTJ" : ["대담한 통솔자", "대담하면서도 상상력이 충부한 강한 의지의 소유자로 다양한 방법을 모색하거나 여의치 않을 경우 새로운 방안을 창출하는 리더형", "d"],
+		"INTP" : ["논리적인 사색가", "끊임없이 새로운 지식에 목말라 하는 혁신가형", "c"],
+		"INTJ" : ["용의주도한 전략가", "상상력이 풍부하며 철두철미한 계획을 세우는 전략가형", "c"],
+		"ISTP" : ["만능 재주꾼", "대담하고 현실적인 성향으로 다양한 도구 사용에 능숙한 탐험형", "b"]
+	}
+
+	var quiz_step = 0;
+	var quiz_step_prt = $("#progress .now");
+
+	var card1 = $("#card1");
+	var card2 = $("#card2");
+
+	var ncard1 = $("#ncard1");
+	var ncard2 = $("#ncard2");
+
+	var score = {};
+
+	var q_name = $("#quiz_name");
+	var q_contact = $("#quiz_contact");
+	var analize_dot = $("#analyzing").find("span")
+
+
+
+
+
+
+	// 1. 첫화면 -> 사전정보 입력 ..빼버림. 
+	// 1->3 
+	$("#btn_start").on('click', 'img', function(event) {
+		event.preventDefault();
+		$("#auto_bottom").hide();
+		$("#home_box").css("display", "none");
+		$("#quiz_box").css("display", "block");
+
+		s_name.parent().parent().css(
+			"background-color", 'white'
+		);
+		s_contact.parent().parent().css(
+			"background-color", 'white'
+		);
+		q_name.val('');
+		s_name.val('');
+		q_contact.val('');
+		s_contact.val('');
+		q_name.attr("placeholder", '');
+		q_contact.attr("placeholder", '');
+		s_name.attr("placeholder", '');
+		s_contact.attr("placeholder", '');
+		reset_user_data();
+
+		quiz_reset_go();
+
+		setTimeout(function(){
+			reposition_bottom();
+			$("#auto_bottom").fadeIn(100);
+		}, 400);
+	});
+
+
+	// 2. 사전정보화면 -> 정보입력하고 시작하기
+	$("#quiz_start_red").on('click', function(event) {
+		event.preventDefault();
+
+		q_name.parent().parent().css(
+			"background-color", 'white'
+		);
+		q_contact.parent().parent().css(
+			"background-color", 'white'
+		);
+
+		if (q_name.val() == "") {
+			console.log("no name");
+			q_name.parent().parent().css(
+				"background-color", '#ffe1e1'
+			);
+			q_name.attr("placeholder", "입력해주세요");
+		}
+		if (q_contact.val() == "") {
+			console.log("no contact");
+			q_contact.parent().parent().css(
+				"background-color", '#ffe1e1'
+			);
+			q_contact.attr("placeholder", "입력해주세요");
+		}
+
+		if (q_name.val() != "" && q_contact.val() != "") {
+			quiz_reset_go();
+		}
+
+		console.log(q_name.val(), q_contact.val());
+
+		/* Act on the event */
+	});
+
+
+	// 2-1. 사전정보 -> 그냥 시작
+	$("#quiz_start_gray").on('click', function(event) {
+		quiz_reset_go();
+	});
+
+	function quiz_reset_go() {
+		if (q_name.val() != "") {
+			user_data.push(q_name.val());
+		}
+		if (q_contact.val() != "") {
+			user_data.push(q_contact.val());
+		}
+
+		// $("#pre_info").css("display", "none");
+		// $("#quiz_box").css("display", "block");
+		score = {
+			'E' : 0,
+			'I' : 0,
+			'S' : 0,
+			'N' : 0,
+			'T' : 0,
+			'F' : 0,
+			'J' : 0,
+			'P' : 0
+		};
+		$("#cards").css('display', 'block');
+		$("#birth_wrap").css('display', 'none');
+		quiz_step = 0;
+		set_quiz(quiz_step);
+	}
+
+
+	// 3. 분석 버튼...
+	card1.mouseover(function(event) {
+		card1.addClass('on');//.find("img").attr("src", "./imgs/left_card_on.jpg")
+	}).mouseout(function(event) {
+		card1.removeClass('on');//.find("img").attr("src", "./imgs/left_card_off.jpg")
+	}).on('click', function(event) {
+		event.preventDefault();
+		quiz_choice(0);		
+	});
+	// ncard1.on('click', function(event) {
+	// 	event.preventDefault();
+	// 	quiz_choice(0);		
+	// });
+
+	card2.mouseover(function(event) {
+		card2.addClass('on');//.find("img").attr("src", "./imgs/right_card_on.jpg")
+	}).mouseout(function(event) {
+		card2.removeClass('on');//.find("img").attr("src", "./imgs/right_card_off.jpg")
+	}).on('click', function(event) {
+		event.preventDefault();
+		quiz_choice(1);
+	});
+	// ncard2.on('click', function(event) {
+	// 	event.preventDefault();
+	// 	quiz_choice(1);
+	// });
+	var choice_data = []
+	function quiz_choice(e) {
+		if (quiz_step == 0) {
+			user_data.push(e == 0 ? '여자' : '남자');
+		} else {
+			choice_data[quiz_step] = quiz_list[quiz_step][e][1];
+			//console.log(choice_data);
+		}
+		
+		if (quiz_step >= quiz_list.length-1) {
+			//go_analize();
+		} else {
+			set_quiz(++quiz_step);
+		}
+	}
+
+	// $("#birth_form").submit(function(event) {
+	// 	event.preventDefault();
+	// 	// alert('submit');
+	// 	var bdate = $("#birth_date").val();
+	// 	if (bdate.length < 6) {
+	// 		return;
+	// 	}
+	// 	go_analize();
+	// });
+
+	var bdate = $("#birth_date");
+	function checkBirth() {
+		// console.log(bdate.val());
+		console.count('aa');
+		if(bdate.val().length > 5) {
+		    //check for empty input
+		    clearInterval(detectBirth);
+		    go_analize();
+		}
+	}
+
+
+
+	function reset_user_data() {
+		user_data = [];
+		//user_data.push(get_timestring());
+		//console.log(user_data);
+	}
+
+	function set_quiz(e) {
+		quiz_step_prt.html(e+1);
+		if (typeof quiz_list[e][2] != 'undefined') {
+			$("#quiz_title").html(quiz_list[e][2]);
+		} else {
+			$("#quiz_title").html(default_question);
+		}
+
+		if (quiz_step == quiz_list.length-1) {
+			$("#birth_date").val('');
+			if (detectBirth) {
+		        clearInterval(detectBirth);
+		    }
+			detectBirth = setInterval(checkBirth, 200);
+			$("#cards").css('display', 'none');
+			$("#birth_wrap").css('display', 'block');
+			reposition_bottom();
+		} else {
+			clearInterval(detectBirth);
+			$("#cards").css('display', 'block');
+			$("#birth_wrap").css('display', 'none');
+		}
+
+		// card1.find("p").html(quiz_list[e][0][0]+'-'+quiz_list[e][0][1]);
+		// card2.find("p").html(quiz_list[e][1][0]+'-'+quiz_list[e][1][1]);
+		var q1 = quiz_list[e][0][0];
+		var q2 = quiz_list[e][1][0];
+		var qj1 = card1.find("p");
+		var qj2 = card2.find("p");
+		qj1.attr('class', '');
+		qj2.attr('class', '');
+		if (q1.length > 32) {
+			qj1.addClass('ql32')
+		} else if (q1.length > 23) {
+			qj1.addClass('ql23')
+		}
+		if (q2.length > 32) {
+			qj2.addClass('ql32')
+		} else if (q2.length > 23) {
+			qj2.addClass('ql23')
+		}
+		qj1.html(q1);
+		qj2.html(q2);
+		// ncard1.find("p").html(quiz_list[e][0][0].replace(/<br>/gi, ''));
+		// ncard2.find("p").html(quiz_list[e][1][0].replace(/<br>/gi, ''));
+		card1.removeClass('on');//.find("img").attr("src", "./imgs/left_card_off.jpg");
+		card2.removeClass('on');//.find("img").attr("src", "./imgs/right_card_off.jpg");
+
+		if (isAdmin) {
+			clearTimeout(auto_quiz_reset_timer);
+			auto_quiz_reset_timer = setTimeout(function(){
+				reset_screen();
+			}, 60*1000);
+		}
+
+		reposition_bottom();
+	}
+
+	var mbti_result = "";
+
+	var end_time = "";
+
+	function go_analize() {
+		// alert(bdate.val());
+		if (typeof event != 'undefined') {
+			event.preventDefault();
+		}
+		clearInterval(detectBirth);
+		clearTimeout(auto_quiz_reset_timer);
+		user_data.push(bdate.val());
+		score = {
+			'E' : 0,
+			'I' : 0,
+			'S' : 0,
+			'N' : 0,
+			'T' : 0,
+			'F' : 0,
+			'J' : 0,
+			'P' : 0
+		};
+		for (var i = 1; i < choice_data.length; i++) {
+			score[choice_data[i]]++;
+		}
+		//console.log(score);
+
+		mbti_result = "";
+		mbti_result += (score.E > score.I) ? "E" : "I";
+		mbti_result += (score.S > score.N) ? "S" : "N";
+		mbti_result += (score.T > score.F) ? "T" : "F";
+		mbti_result += (score.J > score.P) ? "J" : "P";
+
+		//console.log(mbti_result);
+		go_ajax(mbti_result);
+
+		user_data.push(mbti_result);
+		end_time = get_timestring();
+
+		//localStorage.setItem(end_time, JSON.stringify(user_data));
+		console.log(user_data);
+		document.activeElement.blur();
+	    bdate.blur();
+
+		$("#quiz_box").css("display", "none");
+		$("#analyzing").css('display', 'block');
+		analize_dot.css('color', 'gray');
+		set_analize_red_dot(0);
+	}
+
+	function set_analize_red_dot(e) {
+		if (e>4) {
+			go_result();
+			return;
+		}
+		analize_dot.eq(e).css('color', 'red');
+		var rand_time = Math.floor((Math.random() * 200) + 400);
+		setTimeout(function(){
+		  set_analize_red_dot(e+1)
+		}, rand_time);
+	}
+
+	var arrows = $("div.hero3.curator").find("div.arrow");
+
+	function go_result() {
+		
+		var youare = $("#you_are");
+		var myMBTI = mbti_bible[mbti_result.toUpperCase()];
+
+		if (isKyobo) {
+			if (isAdmin) {
+				clearTimeout(auto_goback_timer);
+				auto_goback_timer = setTimeout(function(){
+					reset_screen();
+				}, 60*1000);
+			}
+			//youare.find("p.mbti").html('“'+myMBTI[0]+'”'+mbti_result);
+			youare.find("p.mbti").html('“'+myMBTI[0]+'”');
+			youare.find("p.description").html(myMBTI[1]);
+			youare.find("img.zone").attr("src", "./imgs/zone-new-"+myMBTI[2]+".jpg")
+
+
+			$("#analyzing").css("display", "none");
+			$("#result_kyobo").css("display", "block");
+
+		} else {
+			$("#mbti_title").html('“'+myMBTI[0]+'”');
+			$("#result_normal > div.top_you").css('background-image', 'url(./imgs_mbti/bg_'+mbti_result+'.jpg)');
+			$("#mbti_info1").html(myMBTI[1]);
+			
+			var detail_data = mbti_detail[mbti_result.toUpperCase()];
+			var info2_short = detail_data[0].split('<br>');
+			$("#mbti_info2").html(info2_short[0]);
+			// $("#mbti_info3").html(detail_data[1]);
+
+			$("#mbti_info4").html(detail_data[2]);
+			//$("#mbti_info5").html(detail_data[3]);
+			$("#result_normal div.bg_black").css('opacity', detail_data[4]);
+
+			var curator_suffle_set = mbti_curator_mix[mbti_result.toUpperCase()];
+			var c_temp = curator_suffle_set.shift();
+			curator_suffle_set.push(c_temp);
+
+			for (var i = 0; i < 3; i++) {
+				var hero = $("#mbti_hero"+i);
+				var curator = $("#mbti_curator"+i);
+
+				var hero_data = mbti_hero[mbti_result.toUpperCase()];
+				hero.find("img").attr('src', './imgs_mbti/'+hero_data[i][1]);
+				hero.find("div.hero_name").html(hero_data[i][0].toUpperCase());
+				hero.find("div.hero_detail").html(hero_data[i][2]);
+
+				var curator_data = curator_info[curator_suffle_set[i]];
+				curator.css('background-image', 'url(./imgs_mbti/'+curator_data[1]+')');
+				// curator.attr('class', curator_data[3] ? 'herobox in_store' : 'herobox');
+				arrows.eq(i).attr('class', curator_data[3] ? 'arrow red' : 'arrow gray');
+				curator.find("div.hero_name").html(curator_data[0] + "의 하비박스");
+				curator.find("div.hero_detail").html(curator_data[2]);
+			}
+
+			$("#analyzing").css("display", "none");
+			$("#result_normal").css("display", "block");
+		}
+
+	}
+
+	var s_name = $("#subscribe_name");
+	var s_contact = $("#subscribe_contact");
+
+	$("#subscribe_news").on('click', function(event) {
+		event.preventDefault();
+		
+
+		s_name.parent().parent().css(
+			"background-color", 'white'
+		);
+		s_contact.parent().parent().css(
+			"background-color", 'white'
+		);
+
+		if (s_name.val() == "") {
+			console.log("no name");
+			s_name.parent().parent().css(
+				"background-color", '#ffe1e1'
+			);
+			s_name.attr("placeholder", "입력해주세요");
+		}
+		if (s_contact.val() == "") {
+			console.log("no contact");
+			s_contact.parent().parent().css(
+				"background-color", '#ffe1e1'
+			);
+			s_contact.attr("placeholder", "입력해주세요");
+		}
+
+		if (s_name.val() != "" && s_contact.val() != "") {
+			user_data.push(s_name.val());
+			user_data.push(s_contact.val());
+			//localStorage.setItem(end_time, JSON.stringify(user_data));
+			$("#result_normal").css("display", "none");
+			$("#thankyou").css("display", "block");
+		}
+
+		/* Act on the event */
+	});
+
+	// $("#circle").on('click', function(event) {
+	// 	reset_screen();
+	// });
+
+	var mbti_curator_mix = {
+
+	}
+
+	var curator_info = [
+
+	]
+
+	var mbti_hero = {
+		
+	}
+
+	var mbti_detail = {
+		
+	}
+
+	Date.prototype.format = function(f) {
+	    if (!this.valueOf()) return " ";
+	 
+	    var weekName = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+	    var d = this;
+	     
+	    return f.replace(/(yyyy|yy|MM|dd|E|hh|mm|ss|a\/p)/gi, function($1) {
+	        switch ($1) {
+	            case "yyyy": return d.getFullYear();
+	            case "yy": return (d.getFullYear() % 1000).zf(2);
+	            case "MM": return (d.getMonth() + 1).zf(2);
+	            case "dd": return d.getDate().zf(2);
+	            case "E": return weekName[d.getDay()];
+	            case "HH": return d.getHours().zf(2);
+	            case "hh": return ((h = d.getHours() % 12) ? h : 12).zf(2);
+	            case "mm": return d.getMinutes().zf(2);
+	            case "ss": return d.getSeconds().zf(2);
+	            case "a/p": return d.getHours() < 12 ? "오전" : "오후";
+	            default: return $1;
+	        }
+	    });
+	};
+	 
+	String.prototype.string = function(len){var s = '', i = 0; while (i++ < len) { s += this; } return s;};
+	String.prototype.zf = function(len){return "0".string(len - this.length) + this;};
+	Number.prototype.zf = function(len){return this.toString().zf(len);};
+
+
+	function get_timestring() {
+		
+		return new Date().format("yyyy/MM/dd HH:mm:ss");
+	}
+
+	function go_ajax(e_mbti) {
+		$.ajax({      
+			type:"POST",
+			url:'/result_push_db.php',      
+			data:{mbti:e_mbti},      
+			success:function(args){   
+			    console.log('success', args);
+			},   
+			error:function(e){  
+			   console.log('error', e);
+			}  
+		});
+	} 
+</script>
+</html>
